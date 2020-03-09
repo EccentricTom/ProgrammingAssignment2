@@ -8,9 +8,13 @@ makeCacheMatrix <- function(x = matrix()) {
     x <<- y
     m <<- NULL #this creates the matrix
   }
+  #gets the value of the matrix
   getMatrix <- function() x
+  #inverts and caches the matrix
   setInverse <- function(solve) m <<- solve
+  #this gets the inverted matrix from the cache
   getInverse <- function() m
+  # return the created functions to the working environment
   list(setMatrix = setMatrix, getMatrix = getMatrix, 
        setInverse = setInverse, 
        getInverse = getInverse)
